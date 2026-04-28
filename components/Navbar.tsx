@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
+  { href: "#hero",        label: "Home" },
   { href: "#paragliding", label: "Paragliding" },
   { href: "#services",    label: "Services" },
   { href: "#gallery",     label: "Gallery" },
