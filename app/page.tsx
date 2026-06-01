@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Paragliding from "@/components/Paragliding";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
-import ShandhurBanner from "@/components/ShandhurBanner";
+import Offers from "@/components/Offers";
 import VideoSection from "@/components/VideoSection";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
@@ -22,7 +22,7 @@ export default function Home() {
         <Paragliding />
         <Services />
         <WhyUs />
-        <ShandhurBanner />
+        <Offers />
         <VideoSection />
         <Gallery />
         <Testimonials />

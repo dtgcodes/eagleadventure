@@ -7,6 +7,7 @@ const links = [
   { href: "#hero",        label: "Home" },
   { href: "#paragliding", label: "Paragliding" },
   { href: "#services",    label: "Services" },
+  { href: "#offers",      label: "Offers" },
   { href: "#gallery",     label: "Gallery" },
   { href: "#testimonials",label: "Reviews" },
 ];
@@ -32,7 +33,7 @@ export default function Navbar() {
     >
       {/* Logo */}
       <Link href="#hero" className="flex items-center gap-3 no-underline">
-        <Image src="/logo.jpg" alt="Eagle Adventure and Tourism" width={52} height={52} loading="eager" className="object-contain drop-shadow-[0_2px_8px_rgba(201,162,39,.3)]" />
+        <Image src="/logo.png" alt="Eagle Adventure and Tourism" width={90} height={90} loading="eager" className="object-contain drop-shadow-[0_2px_8px_rgba(201,162,39,.3)]" />
         <div className="leading-tight">
           <strong className="block text-[15px] font-black text-white tracking-[.5px]">Eagle Adventure</strong>
           <span className="text-[9.5px] tracking-[2.5px] uppercase" style={{ color: "var(--gold)" }}>& Tourism</span>
