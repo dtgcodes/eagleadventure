@@ -33,7 +33,8 @@ export default function Offers() {
       (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("up"); io.unobserve(e.target); } }),
       { threshold: 0.08 }
     );
-    [hdrRef, ...cardRefs].forEach((r) => { if (r.current) io.observe(r.current); });
+    if (hdrRef.current) io.observe(hdrRef.current);
+    cardRefs.current.forEach((r) => { if (r) io.observe(r); });
     return () => io.disconnect();
   }, []);
 
