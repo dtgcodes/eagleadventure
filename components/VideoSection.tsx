@@ -29,24 +29,29 @@ export default function VideoSection() {
           Experience what it feels like to soar above Chitral&apos;s breathtaking Hindukush mountains.
         </p>
 
-        <div
-          className="rounded-[20px] overflow-hidden border"
-          style={{
-            borderColor: "rgba(201,162,39,0.25)",
-            boxShadow: "0 24px 60px rgba(0,0,0,0.5)",
-          }}
-        >
-          <video
-            className="w-full"
-            controls
-            playsInline
-            preload="metadata"
-            poster="/video-poster.jpg"
-            style={{ display: "block", maxHeight: "560px", objectFit: "cover" }}
+        <div className="flex justify-center">
+          <div
+            className="rounded-[20px] overflow-hidden border w-full max-w-[380px]"
+            style={{
+              borderColor: "rgba(201,162,39,0.25)",
+              boxShadow: "0 24px 60px rgba(0,0,0,0.5)",
+              aspectRatio: "9/16",
+            }}
           >
-            <source src="/paragliding.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            <video
+              className="w-full h-full"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              style={{ display: "block", objectFit: "cover" }}
+            >
+              <source src="/paragliding.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
 
         <div className="mt-8">
