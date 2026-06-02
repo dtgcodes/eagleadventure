@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const contactItems = [
   { icon: "📍", label: "Location",        value: "Booni, Chitral, Khyber Pakhtunkhwa, Pakistan", href: null },
-  { icon: "📞", label: "Phone / WhatsApp", value: "+92 303 8989750",     href: "tel:+923038989750" },
+  { icon: "📞", label: "Phone / WhatsApp", value: "+92 307 8570384",     href: "tel:+923078570384" },
   { icon: "✉️", label: "Email",           value: "eagleflyingclubbooni@gmail.com", href: "mailto:eagleflyingclubbooni@gmail.com" },
   { icon: "🌐", label: "Website",         value: "efcbooni.com",          href: "https://efcbooni.com" },
   { icon: "🕐", label: "Best Season",     value: "Open Year-Round · Best Flying: May – October", href: null },
@@ -46,7 +46,7 @@ export default function Contact() {
       `💬 *Message:* ${form.message || "—"}`,
     ].join("\n");
 
-    const url = `https://wa.me/923038989750?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/923078570384?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
     setSent(true);
   }
@@ -86,7 +86,7 @@ export default function Contact() {
         </div>
 
         <div className="flex gap-3 mt-9">
-          <a href="https://wa.me/923038989750" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/923078570384" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-4 rounded-lg font-extrabold text-[14px] no-underline transition-all hover:-translate-y-1 hover:brightness-110"
             style={{ background: "var(--gold)", color: "var(--navy)" }}>💬 WhatsApp Us</a>
           <a href="https://www.facebook.com/eagleadventureandtourism/" target="_blank" rel="noopener noreferrer"

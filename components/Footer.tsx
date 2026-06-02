@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="flex gap-2.5">
             {[
               { href: "https://www.facebook.com/eagleadventureandtourism/", label: "f" },
-              { href: "https://wa.me/923038989750",                         label: "💬" },
+              { href: "https://wa.me/923078570384",                         label: "💬" },
               { href: "mailto:eagleflyingclubbooni@gmail.com",              label: "@" },
             ].map((s) => (
               <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer"

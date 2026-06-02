@@ -94,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               url: siteUrl,
               logo: `${siteUrl}/logo.png`,
               image: `${siteUrl}/logo.png`,
-              telephone: "+923038989750",
+              telephone: "+923078570384",
               email: "eagleflyingclubbooni@gmail.com",
               address: {
                 "@type": "PostalAddress",

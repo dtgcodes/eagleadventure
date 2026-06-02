@@ -91,7 +91,7 @@ export default function ShandhurBanner() {
                   🪂 Reserve My Spot
                 </a>
                 <a
-                  href="https://wa.me/923009001888"
+                  href="https://wa.me/923078570384"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-[14px] tracking-[.5px] text-white no-underline border-2 transition-all hover:-translate-y-1 hover:border-[--gold]"

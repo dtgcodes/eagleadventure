@@ -112,7 +112,7 @@ export default function ShandhurPopup() {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="https://wa.me/923038989750?text=Hi!%20I%20want%20to%20book%20a%20Tandem%20Paragliding%20flight%20at%20Shandur%20Festival%202026%20(25K%20PKR).%20Please%20confirm%20my%20slot."
+              href="https://wa.me/923078570384?text=Hi!%20I%20want%20to%20book%20a%20Tandem%20Paragliding%20flight%20at%20Shandur%20Festival%202026%20(25K%20PKR).%20Please%20confirm%20my%20slot."
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-6 py-4 rounded-[12px] font-extrabold text-[14px] tracking-[.5px] no-underline transition-all hover:-translate-y-1 hover:brightness-110"

@@ -145,7 +145,7 @@ export default function Offers() {
                 {/* CTAs */}
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href={`https://wa.me/923038989750?text=${encodeURIComponent(offer.waText)}`}
+                    href={`https://wa.me/923078570384?text=${encodeURIComponent(offer.waText)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-[12px] font-extrabold text-[14px] no-underline transition-all hover:-translate-y-1 hover:brightness-110"
