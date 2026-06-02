@@ -16,7 +16,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden" style={{ paddingBottom: 0 }}>
       {/* Background */}
       <div
         className="hero-bg absolute inset-0"
@@ -39,8 +39,8 @@ export default function Hero() {
         <span key={i} className="glider" style={{ top: g.top, fontSize: g.size, animationDuration: g.duration, animationDelay: g.delay, left: "-120px" }}>🪂</span>
       ))}
 
-      {/* Content */}
-      <div className="relative z-10 px-[6%] max-w-[860px]">
+      {/* Content — pb clears the absolute trust bar (mobile ~160px, desktop ~100px) */}
+      <div className="relative z-10 px-[6%] max-w-[860px] pt-28 pb-[180px] md:pb-[120px]">
         {/* Eyebrow */}
         <div className="fade-up-1 flex items-center gap-3 mb-7">
           <div style={{ width: 28, height: 1, background: "rgba(201,162,39,.6)" }} />
