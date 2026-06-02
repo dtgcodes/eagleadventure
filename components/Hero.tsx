@@ -46,7 +46,7 @@ export default function Hero() {
             rgba(8,14,34,.82) 0%,
             rgba(8,14,34,.28) 40%,
             rgba(8,14,34,.72) 100%),
-            url('https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=1900&q=90&auto=format&fit=crop') center/cover no-repeat`,
+            url('/booni.webp') center/cover no-repeat`,
         }}
       />
 
