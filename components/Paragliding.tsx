@@ -38,8 +38,8 @@ export default function Paragliding() {
         {/* Thumb row */}
         <div className="grid grid-cols-2 gap-3 mt-3">
           {[
-            "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&q=80&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=85&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=85&auto=format&fit=crop",
           ].map((src, i) => (
             <div key={i} className="h-[160px] rounded-[14px] overflow-hidden">
               <Image src={src} alt="Paragliding" width={400} height={160} style={{ width:"100%", height:"100%" }} className="object-cover hover:scale-105 transition-transform duration-400" />
@@ -50,31 +50,33 @@ export default function Paragliding() {
 
       {/* Content */}
       <div ref={rightRef} className="reveal-right">
-        <span className="block text-[11px] font-bold tracking-[3px] uppercase mb-3" style={{ color: "var(--gold)" }}>Our Speciality</span>
-        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.12] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
-          Paragliding Over<br />the Hindukush
+        <span className="eyebrow mb-4">Our Speciality</span>
+        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.1] mb-3" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
+          Paragliding Over<br /><span className="italic" style={{ color: "var(--gold)" }}>the Hindukush</span>
         </h2>
-        <p className="mb-8 leading-[1.8] text-[15.5px]" style={{ color: "var(--muted)" }}>
+        <div style={{ width: 40, height: 1, background: "var(--gold)", opacity: .5, marginBottom: 24 }} />
+        <p className="mb-9 leading-[1.85] text-[15px]" style={{ color: "var(--muted)" }}>
           Eagle Flying Club is Chitral&apos;s premier paragliding club — a dedicated group of certified pilots who live, breathe, and fly the skies above Booni valley every single day.
         </p>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4">
           {features.map((f) => (
-            <div key={f.title} className="flex items-start gap-4 p-5 rounded-xl border transition-all hover:border-[--gold]"
-              style={{ background: "rgba(255,255,255,.04)", borderColor: "rgba(201,162,39,.12)" }}>
-              <span className="text-[24px] mt-0.5">{f.icon}</span>
+            <div key={f.title} className="luxury-card flex items-start gap-5 p-5 rounded-[16px]"
+              style={{ background: "rgba(255,255,255,.03)" }}>
+              <div className="w-11 h-11 min-w-[44px] flex items-center justify-center rounded-[10px] text-[20px]"
+                style={{ background: "rgba(201,162,39,.1)", border: "1px solid rgba(201,162,39,.2)" }}>{f.icon}</div>
               <div>
-                <h4 className="text-[15px] font-bold mb-1">{f.title}</h4>
-                <p className="text-[13px] leading-[1.6]" style={{ color: "var(--muted)" }}>{f.desc}</p>
+                <h4 className="text-[14.5px] font-bold mb-1">{f.title}</h4>
+                <p className="text-[13px] leading-[1.65]" style={{ color: "var(--muted)" }}>{f.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-9">
+        <div className="mt-10">
           <a href="#contact"
-            className="inline-flex items-center gap-2 px-10 py-4 rounded-lg font-extrabold text-[14px] no-underline transition-all hover:-translate-y-1 hover:brightness-110"
-            style={{ background: "var(--gold)", color: "var(--navy)" }}>
+            className="btn-vip inline-flex items-center gap-2 px-10 py-4 rounded-lg font-extrabold text-[13.5px] no-underline"
+            style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "var(--navy)" }}>
             Book a Paragliding Session →
           </a>
         </div>

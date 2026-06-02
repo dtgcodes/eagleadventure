@@ -58,11 +58,12 @@ export default function Contact() {
     <section id="contact" className="grid md:grid-cols-2 gap-[70px] items-start px-[6%] py-[100px]" style={{ background: "var(--navy2)" }}>
       {/* Info */}
       <div ref={leftRef} className="reveal-left">
-        <span className="block text-[11px] font-bold tracking-[3px] uppercase mb-3" style={{ color: "var(--gold)" }}>Get In Touch</span>
-        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.12] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
-          Ready to Fly?<br />Let&apos;s Talk.
+        <span className="eyebrow mb-4">Get In Touch</span>
+        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.1] mb-3" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
+          Ready to Fly?<br /><span className="italic" style={{ color: "var(--gold)" }}>Let&apos;s Talk.</span>
         </h2>
-        <p className="text-[15.5px] leading-[1.8] mb-9" style={{ color: "var(--muted)" }}>
+        <div style={{ width: 40, height: 1, background: "var(--gold)", opacity: .5, marginBottom: 24 }} />
+        <p className="text-[15px] leading-[1.85] mb-9" style={{ color: "var(--muted)" }}>
           Book your paragliding session, enquire about a tour, or just say hello. We respond fast on WhatsApp.
         </p>
 

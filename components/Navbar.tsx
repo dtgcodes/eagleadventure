@@ -27,7 +27,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between px-[6%] transition-all duration-400"
       style={{
         padding: scrolled ? "10px 6%" : "18px 6%",
-        background: scrolled ? "rgba(13,21,51,0.97)" : "transparent",
+        background: scrolled ? "rgba(8,14,34,0.97)" : "transparent",
         boxShadow: scrolled ? "0 2px 30px rgba(0,0,0,.5)" : "none",
       }}
     >
@@ -53,7 +53,7 @@ export default function Navbar() {
           <a
             href="#contact"
             className="no-underline px-5 py-2.5 rounded-md text-[12.5px] font-extrabold tracking-[.5px] uppercase transition-all hover:brightness-110"
-            style={{ background: "var(--gold)", color: "var(--navy)" }}
+            style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "var(--navy)", boxShadow: "0 4px 18px rgba(201,162,39,.3)" }}
           >
             🪂 Book Now
           </a>

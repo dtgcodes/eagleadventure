@@ -19,33 +19,42 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="px-[6%] py-[100px]" style={{ background: "var(--navy)" }}>
-      <div ref={hdrRef} className="reveal text-center mb-14">
-        <span className="block text-[11px] font-bold tracking-[3px] uppercase mb-3" style={{ color: "var(--gold)" }}>Reviews</span>
-        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.12] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
-          Flyers Who Became Fans
+      <div ref={hdrRef} className="reveal text-center mb-[72px]">
+        <span className="eyebrow mb-4">Client Stories</span>
+        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.1] mb-5" style={{ fontSize: "clamp(32px,4.5vw,56px)" }}>
+          Flyers Who<br /><span className="italic" style={{ color: "var(--gold)" }}>Became Fans</span>
         </h2>
-        <p className="text-[15.5px] leading-[1.8] mx-auto max-w-[560px]" style={{ color: "var(--muted)" }}>
+        <div className="gold-divider mx-auto" style={{ maxWidth: 180 }} />
+        <p className="text-[15px] leading-[1.85] mx-auto max-w-[500px] mt-5" style={{ color: "var(--muted)" }}>
           Real stories from real people who dared to soar above the Hindukush.
         </p>
       </div>
 
-      <div ref={gridRef} className="reveal grid md:grid-cols-3 gap-6">
+      <div ref={gridRef} className="reveal grid md:grid-cols-3 gap-7 max-w-[1100px] mx-auto">
         {reviews.map((r) => (
-          <div key={r.name} className="rounded-[18px] p-8 border transition-all duration-300 hover:-translate-y-1 hover:border-[--gold]"
-            style={{ background: "var(--navy2)", borderColor: "rgba(255,255,255,.06)" }}>
-            <div className="flex justify-between items-start mb-5">
-              <div className="text-[16px] tracking-[2px]" style={{ color: "var(--gold)" }}>★★★★★</div>
-              <div className="text-[36px] leading-none opacity-[.18]">&quot;</div>
+          <div key={r.name} className="luxury-card rounded-[20px] p-9 relative overflow-hidden flex flex-col"
+            style={{ background: "linear-gradient(160deg, rgba(17,29,66,.95) 0%, rgba(12,20,48,.95) 100%)" }}>
+            {/* Large decorative quote */}
+            <div className="absolute top-4 right-6 font-[family-name:var(--font-playfair)] leading-none select-none pointer-events-none"
+              style={{ fontSize: 90, color: "rgba(201,162,39,.07)" }}>&ldquo;</div>
+            {/* Stars */}
+            <div className="flex gap-1 mb-6">
+              {[...Array(5)].map((_, si) => (
+                <svg key={si} width="13" height="13" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 1l1.545 3.09L12 4.635l-2.5 2.435.59 3.43L7 8.91l-3.09 1.59.59-3.43L2 4.635l3.455-.545L7 1z" fill="var(--gold)" />
+                </svg>
+              ))}
             </div>
-            <p className="text-[14.5px] leading-[1.85] italic mb-6" style={{ color: "rgba(255,255,255,.83)" }}>&ldquo;{r.text}&rdquo;</p>
-            <div className="flex items-center gap-3">
-              <div className="w-[46px] h-[46px] rounded-full flex items-center justify-center font-black text-[15px] border-2"
-                style={{ background: "var(--gold)", color: "var(--navy)", borderColor: "rgba(201,162,39,.3)" }}>
+            <p className="text-[14.5px] leading-[1.9] mb-7 flex-1 italic" style={{ color: "rgba(255,255,255,.78)" }}>&ldquo;{r.text}&rdquo;</p>
+            <div style={{ height: 1, background: "linear-gradient(90deg, rgba(201,162,39,.3), transparent)", marginBottom: 20 }} />
+            <div className="flex items-center gap-4">
+              <div className="w-[48px] h-[48px] rounded-full flex items-center justify-center font-black text-[15px] flex-shrink-0"
+                style={{ background: "linear-gradient(135deg, var(--gold), var(--gold2))", color: "var(--navy)", boxShadow: "0 4px 16px rgba(201,162,39,.3)" }}>
                 {r.initials}
               </div>
               <div>
-                <strong className="block text-[14px]">{r.name}</strong>
-                <span className="text-[12px]" style={{ color: "var(--muted)" }}>{r.from}</span>
+                <strong className="block text-[14px] font-bold">{r.name}</strong>
+                <span className="text-[11.5px]" style={{ color: "var(--muted)" }}>{r.from}</span>
               </div>
             </div>
           </div>

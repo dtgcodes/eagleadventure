@@ -1,31 +1,118 @@
 @import "tailwindcss";
 
 :root {
-  --navy:    #0d1533;
-  --navy2:   #111d42;
-  --navy3:   #192554;
+  --navy:    #080e22;
+  --navy2:   #0c1430;
+  --navy3:   #111d42;
   --gold:    #c9a227;
   --gold2:   #e8ba30;
-  --muted:   #8fa3c8;
+  --gold3:   #f0cc5a;
+  --muted:   #7a92b8;
+  --muted2:  #a8bbd8;
 }
 
-html { scroll-behavior: smooth; }
-body { background: var(--navy); color: #fff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+/* ── Scrollbar ─────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: rgba(201,162,39,.35); border-radius: 3px; }
 
-.reveal        { opacity: 0; transform: translateY(36px); transition: opacity .75s ease, transform .75s ease; }
-.reveal-left   { opacity: 0; transform: translateX(-40px); transition: opacity .75s ease, transform .75s ease; }
-.reveal-right  { opacity: 0; transform: translateX(40px); transition: opacity .75s ease, transform .75s ease; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Reveal ────────────────────────────── */
+.reveal        { opacity: 0; transform: translateY(40px); transition: opacity .95s cubic-bezier(.22,1,.36,1), transform .95s cubic-bezier(.22,1,.36,1); }
+.reveal-left   { opacity: 0; transform: translateX(-44px); transition: opacity .95s cubic-bezier(.22,1,.36,1), transform .95s cubic-bezier(.22,1,.36,1); }
+.reveal-right  { opacity: 0; transform: translateX(44px);  transition: opacity .95s cubic-bezier(.22,1,.36,1), transform .95s cubic-bezier(.22,1,.36,1); }
 .reveal.up, .reveal-left.up, .reveal-right.up { opacity: 1; transform: none; }
 
-@keyframes heroZoom   { from{transform:scale(1)}   to{transform:scale(1.07)} }
-@keyframes glide      { 0%{transform:translate(-120px,0) rotate(-5deg);opacity:0} 5%{opacity:.9} 95%{opacity:.7} 100%{transform:translate(110vw,-60px) rotate(3deg);opacity:0} }
-@keyframes waPulse    { 0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)} 50%{box-shadow:0 6px 45px rgba(37,211,102,.7)} }
-@keyframes fadeUp     { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:none} }
+/* ── Keyframes ─────────────────────────── */
+@keyframes heroZoom  { from{transform:scale(1)}   to{transform:scale(1.06)} }
+@keyframes glide     { 0%{transform:translate(-120px,0) rotate(-5deg);opacity:0} 5%{opacity:.9} 95%{opacity:.7} 100%{transform:translate(110vw,-60px) rotate(3deg);opacity:0} }
+@keyframes waPulse   { 0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)} 50%{box-shadow:0 6px 45px rgba(37,211,102,.7)} }
+@keyframes fadeUp    { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:none} }
+@keyframes shimmer   { 0%{background-position:200% center} 100%{background-position:-200% center} }
+@keyframes linegrow  { from{transform:scaleX(0)} to{transform:scaleX(1)} }
 
-.hero-bg      { animation: heroZoom 22s ease-in-out infinite alternate; }
-.glider       { animation: glide linear infinite; opacity: 0; position: absolute; pointer-events: none; }
-.wa-pulse     { animation: waPulse 2.5s infinite; }
-.fade-up-1    { animation: fadeUp .8s ease both; }
-.fade-up-2    { animation: fadeUp .8s .12s ease both; }
-.fade-up-3    { animation: fadeUp .8s .24s ease both; }
-.fade-up-4    { animation: fadeUp .8s .36s ease both; }
+/* ── Animation classes ─────────────────── */
+.hero-bg   { animation: heroZoom 26s ease-in-out infinite alternate; }
+.glider    { animation: glide linear infinite; opacity: 0; position: absolute; pointer-events: none; }
+.wa-pulse  { animation: waPulse 2.5s infinite; }
+.fade-up-1 { animation: fadeUp .9s ease both; }
+.fade-up-2 { animation: fadeUp .9s .15s ease both; }
+.fade-up-3 { animation: fadeUp .9s .30s ease both; }
+.fade-up-4 { animation: fadeUp .9s .45s ease both; }
+
+/* ── Luxury utilities ──────────────────── */
+
+/* Shimmering gold text */
+.gold-shimmer {
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold3) 40%, var(--gold) 70%, var(--gold2) 100%);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 7s linear infinite;
+}
+
+/* Eyebrow label with side lines */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  opacity: .55;
+  transform-origin: center;
+  animation: linegrow .8s ease both;
+}
+
+/* Luxury card hover */
+.luxury-card {
+  border: 1px solid rgba(201,162,39,.12);
+  transition: border-color .45s ease, transform .45s ease, box-shadow .45s ease;
+}
+.luxury-card:hover {
+  border-color: rgba(201,162,39,.42);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 64px rgba(0,0,0,.45), 0 0 0 1px rgba(201,162,39,.08);
+}
+
+/* Gold hairline section divider */
+.gold-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,162,39,.35) 30%, rgba(201,162,39,.35) 70%, transparent 100%);
+}
+
+/* VIP button */
+.btn-vip {
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.btn-vip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+  transform: translateX(-100%);
+  transition: transform .5s ease;
+}
+.btn-vip:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,162,39,.35); }
+.btn-vip:hover::after { transform: translateX(100%); }

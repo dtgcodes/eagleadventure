@@ -36,12 +36,13 @@ export default function Services() {
 
   return (
     <section id="services" className="px-[6%] py-[100px]" style={{ background: "var(--navy)" }}>
-      <div ref={hdrRef} className="reveal text-center mb-12">
-        <span className="block text-[11px] font-bold tracking-[3px] uppercase mb-3" style={{ color: "var(--gold)" }}>All Adventures</span>
-        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.12] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
-          More Than Just<br />Paragliding
+      <div ref={hdrRef} className="reveal text-center mb-14">
+        <span className="eyebrow mb-4">All Adventures</span>
+        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.1] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
+          More Than Just<br /><span className="italic" style={{ color: "var(--gold)" }}>Paragliding</span>
         </h2>
-        <p className="text-[15.5px] leading-[1.8] mx-auto max-w-[560px]" style={{ color: "var(--muted)" }}>
+        <div className="gold-divider mx-auto" style={{ maxWidth: 180 }} />
+        <p className="text-[15px] leading-[1.85] mx-auto max-w-[520px] mt-5" style={{ color: "var(--muted)" }}>
           Explore the full width of Chitral — on the ground, on the trails, or in the air.
         </p>
       </div>

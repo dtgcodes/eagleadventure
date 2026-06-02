@@ -9,12 +9,12 @@ const nav = {
 
 export default function Footer() {
   return (
-    <footer className="border-t px-[6%] pt-16 pb-8" style={{ background: "var(--navy)", borderColor: "rgba(255,255,255,.07)" }}>
+    <footer className="px-[6%] pt-16 pb-8" style={{ background: "var(--navy)", borderTop: "1px solid rgba(201,162,39,.2)" }}>
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12">
         {/* Brand */}
         <div>
           <Link href="#hero" className="inline-flex items-center gap-3 no-underline mb-1">
-            <Image src="/logo.jpg" alt="Eagle Adventure" width={56} height={56} className="object-contain" />
+            <Image src="/logo.png" alt="Eagle Adventure" width={90} height={90} className="object-contain" />
             <div className="leading-tight">
               <strong className="block text-[15px] font-black text-white tracking-[.5px]">Eagle Adventure</strong>
               <span className="text-[9.5px] tracking-[2.5px] uppercase" style={{ color: "var(--gold)" }}>& Tourism · SMC-Pvt Ltd</span>

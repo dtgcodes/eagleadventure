@@ -3,11 +3,11 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=900&q=85&auto=format&fit=crop",  alt: "Paragliding Chitral",    cls: "col-span-5 row-span-2" },
-  { src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop",  alt: "Paraglider sky",         cls: "col-span-3 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop", alt: "Hindukush peaks",        cls: "col-span-4 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80&auto=format&fit=crop", alt: "Mountain valley",        cls: "col-span-4 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&auto=format&fit=crop", alt: "Snow mountains",         cls: "col-span-3 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=900&q=85&auto=format&fit=crop", alt: "Paragliding over Chitral valley",    cls: "col-span-5 row-span-2" },
+  { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=85&auto=format&fit=crop", alt: "Snow-capped Hindukush peaks",         cls: "col-span-3 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=85&auto=format&fit=crop", alt: "Green mountain valley Chitral",       cls: "col-span-4 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=85&auto=format&fit=crop", alt: "Aerial view of mountain landscape",   cls: "col-span-4 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=85&auto=format&fit=crop", alt: "Mountain trekking Chitral",           cls: "col-span-3 row-span-1" },
 ];
 
 export default function Gallery() {
@@ -23,11 +23,12 @@ export default function Gallery() {
   return (
     <section id="gallery" className="px-[6%] py-[100px]" style={{ background: "var(--navy3)" }}>
       <div ref={hdrRef} className="reveal text-center mb-14">
-        <span className="block text-[11px] font-bold tracking-[3px] uppercase mb-3" style={{ color: "var(--gold)" }}>Gallery</span>
-        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.12] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
-          Life Above the Clouds
+        <span className="eyebrow mb-4">Gallery</span>
+        <h2 className="font-[family-name:var(--font-playfair)] leading-[1.1] mb-4" style={{ fontSize: "clamp(32px,4.5vw,54px)" }}>
+          Life Above<br /><span className="italic" style={{ color: "var(--gold)" }}>the Clouds</span>
         </h2>
-        <p className="text-[15.5px] leading-[1.8] mx-auto max-w-[560px]" style={{ color: "var(--muted)" }}>
+        <div className="gold-divider mx-auto" style={{ maxWidth: 180 }} />
+        <p className="text-[15px] leading-[1.85] mx-auto max-w-[500px] mt-5" style={{ color: "var(--muted)" }}>
           Real moments captured thousands of feet above Chitral&apos;s majestic valleys.
         </p>
       </div>
