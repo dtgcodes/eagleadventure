@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect, useRef } from "react";
 
 const gliders = [
   { top: "20%", duration: "28s", delay: "0s",  size: "44px" },
@@ -15,6 +16,26 @@ const stats = [
 ];
 
 export default function Hero() {
+  const [videoOpen, setVideoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoOpen) {
+      document.body.style.overflow = "hidden";
+      setTimeout(() => videoRef.current?.play(), 100);
+    } else {
+      document.body.style.overflow = "";
+      videoRef.current?.pause();
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [videoOpen]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setVideoOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden" style={{ paddingBottom: 0 }}>
       {/* Background */}
@@ -82,15 +103,58 @@ export default function Hero() {
           >
             🪂 Book a Flight
           </a>
-          <a
-            href="#video"
-            className="inline-flex items-center gap-2 px-10 py-4 rounded-lg font-bold text-[13.5px] tracking-[.5px] text-white no-underline border transition-all hover:-translate-y-1"
+          <button
+            onClick={() => setVideoOpen(true)}
+            className="inline-flex items-center gap-3 px-10 py-4 rounded-lg font-bold text-[13.5px] tracking-[.5px] text-white border transition-all hover:-translate-y-1 cursor-pointer"
             style={{ borderColor: "rgba(255,255,255,.2)", background: "rgba(255,255,255,.05)", backdropFilter: "blur(8px)" }}
           >
-            ▶ Watch Us Fly
-          </a>
+            <span className="w-8 h-8 rounded-full flex items-center justify-center text-[12px]"
+              style={{ background: "var(--gold)", color: "var(--navy)" }}>▶</span>
+            Watch Us Fly
+          </button>
         </div>
       </div>
+
+      {/* ── Video Modal ─────────────────────────────── */}
+      {videoOpen && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-10"
+          style={{ background: "rgba(0,0,0,.92)", backdropFilter: "blur(10px)" }}
+          onClick={() => setVideoOpen(false)}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setVideoOpen(false)}
+            type="button"
+            className="absolute top-5 right-5 w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-[18px] z-10 transition-all hover:scale-110"
+            style={{ background: "rgba(255,255,255,.12)", border: "1px solid rgba(255,255,255,.2)" }}
+          >✕</button>
+
+          {/* Video container */}
+          <div
+            className="relative w-full rounded-[20px] overflow-hidden"
+            style={{
+              maxWidth: 420,
+              border: "1px solid rgba(201,162,39,.3)",
+              boxShadow: "0 40px 100px rgba(0,0,0,.8)",
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Gold top bar */}
+            <div className="h-[3px]" style={{ background: "linear-gradient(90deg, var(--gold), var(--gold2), var(--gold))" }} />
+            <video
+              ref={videoRef}
+              className="w-full block"
+              controls
+              playsInline
+              loop
+              style={{ display: "block", aspectRatio: "9/16", objectFit: "cover" }}
+            >
+              <source src="/paragliding.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
 
       {/* Trust bar */}
       <div
