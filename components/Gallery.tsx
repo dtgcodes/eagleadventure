@@ -3,11 +3,12 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=900&q=85&auto=format&fit=crop", alt: "Paragliding over Chitral valley",    cls: "col-span-5 row-span-2" },
-  { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=85&auto=format&fit=crop", alt: "Snow-capped Hindukush peaks",         cls: "col-span-3 row-span-1" },
+  { src: "/booni.webp",                                                                                    alt: "Booni Valley, Chitral",              cls: "col-span-4 row-span-2" },
+  { src: "https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=900&q=85&auto=format&fit=crop", alt: "Paragliding over Chitral valley",    cls: "col-span-4 row-span-2" },
+  { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=85&auto=format&fit=crop", alt: "Snow-capped Hindukush peaks",         cls: "col-span-4 row-span-1" },
   { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=85&auto=format&fit=crop", alt: "Green mountain valley Chitral",       cls: "col-span-4 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=85&auto=format&fit=crop", alt: "Aerial view of mountain landscape",   cls: "col-span-4 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=85&auto=format&fit=crop", alt: "Mountain trekking Chitral",           cls: "col-span-3 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=85&auto=format&fit=crop", alt: "Aerial view of mountain landscape",   cls: "col-span-6 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=85&auto=format&fit=crop", alt: "Mountain trekking Chitral",           cls: "col-span-6 row-span-1" },
 ];
 
 export default function Gallery() {
@@ -33,7 +34,7 @@ export default function Gallery() {
         </p>
       </div>
 
-      <div ref={gridRef} className="reveal grid grid-cols-12 grid-rows-2 gap-3" style={{ height: "520px" }}>
+      <div ref={gridRef} className="reveal grid grid-cols-12 grid-rows-3 gap-3" style={{ height: "680px" }}>
         {photos.map((p) => (
           <div key={p.alt} className={`group relative rounded-[14px] overflow-hidden cursor-pointer ${p.cls}`}>
             <Image src={p.src} alt={p.alt} fill className="object-cover transition-transform duration-400 group-hover:scale-[1.07]" />
