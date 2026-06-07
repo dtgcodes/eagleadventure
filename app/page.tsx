@@ -4,6 +4,7 @@ import Paragliding from "@/components/Paragliding";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import Offers from "@/components/Offers";
+import TandemFlights from "@/components/TandemFlights";
 import VideoSection from "@/components/VideoSection";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <WhyUs />
         <Offers />
+        <TandemFlights />
         <VideoSection />
         <Gallery />
         <Testimonials />

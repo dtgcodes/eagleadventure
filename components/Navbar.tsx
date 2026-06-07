@@ -8,6 +8,7 @@ const links = [
   { href: "#paragliding", label: "Paragliding" },
   { href: "#services",    label: "Services" },
   { href: "#offers",      label: "Offers" },
+  { href: "#tandem",      label: "Flights" },
   { href: "#gallery",     label: "Gallery" },
   { href: "#testimonials",label: "Reviews" },
 ];
