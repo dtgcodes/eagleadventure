@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 const videos = [
   { src: "/Video1.mp4", label: "Flight 01" },
   { src: "/Video2.mp4", label: "Flight 02" },
-  { src: "/video3.mp4", label: "Flight 03" },
 ];
 
 export default function TandemFlights() {
