@@ -7,6 +7,7 @@ import TandemFlights from "@/components/TandemFlights";
 import VideoSection from "@/components/VideoSection";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import VideoReviews from "@/components/VideoReviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -24,6 +25,7 @@ export default function Home() {
         <VideoSection />
         <Gallery />
         <Testimonials />
+        <VideoReviews />
         <Contact />
       </main>
       <Footer />
