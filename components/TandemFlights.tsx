@@ -108,7 +108,7 @@ export default function TandemFlights() {
         {/* ── Offer Card ── */}
         <div className="flex flex-col gap-5">
 
-          {/* Limited offer banner */}
+          {/* Highlight banner */}
           <div className="rounded-[18px] p-6 text-center relative overflow-hidden"
             style={{
               background: "linear-gradient(135deg, rgba(201,162,39,.18) 0%, rgba(232,186,48,.08) 100%)",
@@ -117,13 +117,10 @@ export default function TandemFlights() {
             <div className="absolute top-0 right-0 w-[140px] h-[140px] pointer-events-none opacity-10"
               style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }} />
             <div className="text-[10px] font-extrabold tracking-[3px] uppercase mb-2" style={{ color: "var(--gold)" }}>
-              🔥 Limited Time Offer
+              🪂 Tandem Flight
             </div>
-            <div className="flex items-baseline justify-center gap-1 mb-1">
-              <span className="font-black leading-none" style={{ fontSize: 52, color: "var(--gold)" }}>6K</span>
-              <span className="text-[20px] font-bold text-white">PKR</span>
-            </div>
-            <div className="text-[12px]" style={{ color: "var(--muted)" }}>per person · book before slots fill</div>
+            <div className="text-[22px] font-bold text-white mb-1">Qaqlasht → Booni</div>
+            <div className="text-[12px]" style={{ color: "var(--muted)" }}>Contact us for pricing &amp; availability</div>
           </div>
 
           {/* Flight details */}
@@ -147,22 +144,17 @@ export default function TandemFlights() {
           </div>
 
           {/* CTA buttons */}
-          <a href={`https://wa.me/923078570384?text=${encodeURIComponent("Hi! I want to book a Tandem Paragliding flight from Qaqlasht to Booni for 6000 PKR. Please confirm my slot.")}`}
+          <a href={`https://wa.me/923078570384?text=${encodeURIComponent("Hi! I want to book a Tandem Paragliding flight from Qaqlasht to Booni. Please share details and confirm my slot.")}`}
             target="_blank" rel="noopener noreferrer"
             className="btn-vip flex items-center justify-center gap-3 py-4 rounded-[14px] font-extrabold text-[15px] no-underline"
             style={{ background: "#25D366", color: "#fff" }}>
-            <span className="text-[20px]">💬</span> Book on WhatsApp — 6,000 PKR
+            <span className="text-[20px]">💬</span> Book on WhatsApp
           </a>
           <a href="#contact"
             className="flex items-center justify-center gap-2 py-4 rounded-[14px] font-bold text-[14px] no-underline border transition-all hover:-translate-y-1"
             style={{ borderColor: "rgba(201,162,39,.3)", color: "var(--muted)" }}>
             📞 Enquire via Contact Form
           </a>
-
-          {/* Urgency */}
-          <div className="text-center text-[12px]" style={{ color: "var(--muted)" }}>
-            ⚡ Price may increase — <span style={{ color: "var(--gold)" }}>book now at 6K PKR</span>
-          </div>
         </div>
       </div>
     </section>
